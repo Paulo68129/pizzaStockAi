@@ -1,0 +1,2 @@
+# pizzaStockAi
+gerenciamento de estoque
