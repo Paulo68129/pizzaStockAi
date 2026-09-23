@@ -1,0 +1,4 @@
+/* Acentos leves — a identidade principal vem do .streamlit/config.toml */
+[data-testid="stSidebar"] {
+  border-right: 1px solid #d5dbe3;
+}
