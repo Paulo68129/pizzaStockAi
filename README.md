@@ -1,189 +1,246 @@
 # pizzaStockAi
 🍕 PizzaStockAI
 
-Sistema inteligente de gestão para pizzarias desenvolvido para centralizar o controle de estoque, vendas, finanças e previsões de demanda em uma única plataforma. O objetivo é auxiliar gestores na tomada de decisões estratégicas, reduzindo desperdícios, evitando falta de insumos e aumentando a lucratividade do negócio.
+AI-Powered Inventory, Sales Analytics & Demand Forecasting Platform for Pizzerias
 
-🚀 Funcionalidades
-📦 Gestão de Estoque
-Cadastro de ingredientes
-Controle de quantidade em estoque
-Definição de estoque mínimo
-Controle de validade
-Controle de custo unitário
-Alertas automáticos de estoque crítico
-🍕 Controle de Receitas
-Cadastro de receitas por pizza
-Baixa automática dos ingredientes após uma venda
-Controle de consumo de insumos
-💰 Gestão de Vendas
-Registro de pedidos
-Controle de faturamento
-Cálculo de custos
-Cálculo automático de lucro
-Histórico de vendas
-📊 Dashboard Gerencial
-Faturamento diário
-Total de pedidos
-Ticket médio
-Lucro operacional
-Estoque crítico
-Produtos próximos ao vencimento
-Atualização em tempo real
-📈 Controle Financeiro
-Receitas diárias
-Receitas semanais
-Receitas mensais
-Receitas anuais
-CMV (Custo da Mercadoria Vendida)
-Indicadores financeiros
-🤖 Inteligência Artificial
-Previsão de demanda
-Recomendação de compras
-Análise de tendências de consumo
-Redução de desperdícios através de Machine Learning
-🔐 Controle de Acesso
-Administrador
-Gerente
-Atendente
-🏗️ Arquitetura
-Plain Text
+O PizzaStockAI é uma plataforma de gestão inteligente desenvolvida para otimizar a operação de pizzarias por meio da integração entre controle de estoque, gestão de vendas, monitoramento financeiro e previsão de demanda baseada em Machine Learning. O sistema visa transformar dados operacionais em informações estratégicas, permitindo uma gestão orientada por indicadores e redução de desperdícios.
+
+Visão Geral
+
+O projeto foi concebido para resolver problemas recorrentes encontrados em operações de food service, como:
+
+Ruptura de estoque durante horários de pico;
+Excesso de compras e desperdício de insumos;
+Falta de rastreabilidade financeira;
+Ausência de indicadores de desempenho;
+Baixa previsibilidade de demanda.
+
+Por meio da combinação de APIs, dashboards analíticos e algoritmos de previsão, o PizzaStockAI fornece suporte à tomada de decisão operacional e gerencial.
+
+Arquitetura da Solução
 PizzaStockAI
 │
-├── backend/
-│ ├── routers/
-│ ├── services/
-│ ├── app.py
-│ ├── models.py
-│ └── database.py
+├── backend/                # API FastAPI
+│   ├── routers/            # Endpoints REST
+│   ├── services/           # Regras de negócio
+│   ├── models.py           # Modelos ORM
+│   ├── schemas.py          # DTOs/Pydantic
+│   ├── database.py         # Configuração do banco
+│   └── app.py              # Aplicação principal
 │
-├── frontend/
-│ ├── app_pages/
-│ ├── dashboard.py
-│ └── assets/
+├── frontend/               # Dashboard Streamlit
+│   ├── app_pages/
+│   ├── assets/
+│   └── dashboard.py
 │
-├── ml/
-│ ├── forecast.py
-│ └── recommendation.py
+├── ml/                     # Módulos de IA
+│   ├── forecast.py
+│   └── recommendation.py
+│
+├── tests/                  # Testes automatizados
 │
 ├── database/
-│ └── pizzastock.db
+│   └── pizzastock.db
 │
-├── tests/
-│
-└── .venv/
-``
-Mostrar mais linhas
-🛠️ Tecnologias Utilizadas
+└── seed.py                 # Dados iniciais
+
+Principais Funcionalidades
+Gestão Inteligente de Estoque
+Cadastro de ingredientes e insumos
+Controle de estoque mínimo
+Gestão de validade
+Controle de custos unitários
+Monitoramento em tempo real
+Alertas automáticos para itens críticos
+Identificação de produtos próximos ao vencimento
+Controle de Receitas
+
+Cada pizza possui uma composição de ingredientes cadastrada no sistema.
+
+Funcionalidades:
+
+Cadastro de receitas técnicas
+Mapeamento de consumo por produto
+Baixa automática dos insumos após cada venda
+Atualização automática do estoque
+Gestão de Vendas
+
+O módulo de vendas é responsável pelo gerenciamento completo dos pedidos.
+
+Recursos
+Registro de vendas
+Histórico de transações
+Apuração de faturamento
+Cálculo de custos
+Análise de lucratividade
+Indicadores operacionais em tempo real
+Dashboard Executivo
+
+O sistema disponibiliza dashboards analíticos desenvolvidos em Streamlit para acompanhamento dos principais KPIs do negócio.
+
+Indicadores Monitorados
+Receita diária
+Receita mensal
+Receita anual
+Quantidade de pedidos
+Ticket médio
+Estoque crítico
+CMV
+Lucro operacional
+Produtos com risco de vencimento
+Sistema de Alertas Operacionais
+
+Motor de monitoramento responsável pela geração de alertas estratégicos, incluindo:
+
+Estoque Crítico
+Mussarela abaixo do estoque mínimo
+
+Produtos Próximos ao Vencimento
+Tomate vence em 2 dias
+
+Crescimento Repentino da Demanda
+
+Possibilita antecipação de compras e planejamento operacional.
+
+Inteligência Artificial
+
+Um dos diferenciais do PizzaStockAI é seu módulo de análise preditiva.
+
+A camada de Machine Learning utiliza algoritmos de regressão para:
+
+Previsão de vendas futuras
+Estimativa de demanda por produto
+Planejamento de compras
+Identificação de padrões de consumo
+Apoio à tomada de decisão baseada em dados
+Stack Tecnológica
 Backend
+Python 3.13+
 FastAPI
 SQLAlchemy
+Pydantic
 JWT Authentication
+Uvicorn
 Frontend
 Streamlit
-Banco de Dados
-SQLite
-PostgreSQL (produção)
-Machine Learning
-Scikit-Learn
-Regressão Linear
-Visualização de Dados
 Plotly
-DevOps
-Docker Compose
+Pandas
+Data Science
+Scikit-Learn
+NumPy
+Machine Learning Forecast Engine
+Banco de Dados
+Desenvolvimento
+SQLite
 
-⚙️ Instalação
-1. Clonar o projeto
-Shell
+Produção
+PostgreSQL
+
+Fluxo de Operação
+graph LR
+<img width="4032" height="936" alt="image" src="https://github.com/user-attachments/assets/6746f741-5eca-454f-ab71-6b2600339db6" />
+
+A[Venda de Pizza]
+--> B[Consumo da Receita]
+
+B --> C[Baixa Automática do Estoque]
+
+C --> D[Atualização dos Indicadores]
+
+D --> E[Dashboard Gerencial]
+
+D --> F[Motor de Alertas]
+
+D --> G[Previsão de Demanda]
+
+Instalação
+Clonando o Repositório
 git clone https://github.com/Paulo68129/PizzaStockAI.git
+
 cd PizzaStockAI
-Mostrar mais linhas
-2. Criar ambiente virtual
-Shell
+
+Criando Ambiente Virtual
 python -m venv .venv
-Mostrar mais linhas
-3. Ativar ambiente virtual
 
-PowerShell:
-
-PowerShell
+Windows
 .\.venv\Scripts\Activate.ps1
-Mostrar mais linhas
-4. Instalar dependências
-Shell
+
+Instalação das Dependências
 pip install -r requirements.txt
-Mostrar mais linhas
-▶️ Executando o Backend
 
-Na raiz do projeto:
-
-PowerShell
+Execução da API
 python -m uvicorn backend.app:app --reload
-``
-Mostrar mais linhas
 
+Endpoints
 API:
-
-Plain Text
 http://127.0.0.1:8000
-Mostrar mais linhas
 
-Swagger:
-
-Plain Text
+Swagger UI:
 http://127.0.0.1:8000/docs
-Mostrar mais linhas
-▶️ Executando o Dashboard
 
-Abra outro terminal:
+ReDoc:
+http://127.0.0.1:8000/redoc
 
-PowerShell
-.\.venv\Scripts\Activate.ps1
+Execução do Dashboard
 cd frontend
+
 streamlit run dashboard.py
-Mostrar mais linhas
 
-Dashboard:
 
-Plain Text
+A aplicação ficará disponível em:
+
 http://localhost:8501
-Mostrar mais linhas
-🧪 Testes
 
-Executar testes automatizados:
+Testes
 
-Shell
+Execução da suíte de testes:
+
 pytest
-Mostrar mais linhas
-📈 Benefícios
 
-✅ Controle automatizado de estoque
 
-✅ Redução de desperdícios
+Estrutura atual:
 
-✅ Monitoramento financeiro
+tests/
+├── test_api.py
+├── test_ml.py
+└── test_sales_service.py
 
-✅ Dashboard em tempo real
-
-✅ Previsão inteligente de demanda
-
-✅ Melhor tomada de decisão
-
-✅ Escalabilidade para crescimento do negócio
-
-✅ Integração entre estoque, vendas e finanças
-
-👨‍💻 Autor
+Roadmap
+Curto Prazo
+Dashboard mobile responsive
+Exportação PDF e Excel
+Relatórios gerenciais avançados
+Controle multiusuário
+Médio Prazo
+Docker Compose
+PostgreSQL em produção
+Integração com ERPs
+API pública
+Longo Prazo
+IA generativa para recomendações
+Análise preditiva avançada
+Aplicativo mobile (Flutter)
+Multi-tenant SaaS
+Diferenciais Competitivos
+Controle operacional centralizado
+Previsão inteligente de demanda
+Gestão financeira integrada
+Alertas automatizados
+Dashboard analítico em tempo real
+Arquitetura escalável baseada em APIs
+Aplicação de Machine Learning em operações de food service
+Autor
 
 Paulo Roberto Silva de Oliveira Júnior
 
+Software Developer | Full Stack Developer
+
 🎓 Análise e Desenvolvimento de Sistemas - UNIFESO
-
-🐍 Python Developer
-
-🌐 Full Stack Developer
 
 🔗 GitHub: https://github.com/Paulo68129
 
-📄 Licença
+Licença
 
-Este projeto foi desenvolvido para fins acadêmicos e profissionais, podendo ser adaptado para ambientes comerciais conforme necessidade do negócio.
+Este projeto foi desenvolvido para fins acadêmicos, portfólio profissional e demonstração de competências em desenvolvimento de software, análise de dados e inteligência artificial aplicada ao setor de alimentação.
+
+PizzaStockAI® | Intelligent Inventory & Sales Management Platform for Pizzerias 🍕🚀
