@@ -1,246 +1,630 @@
-# pizzaStockAi
-🍕 PizzaStockAI
+# 🍕 PizzaStockAI
 
-AI-Powered Inventory, Sales Analytics & Demand Forecasting Platform for Pizzerias
+> **AI-Powered Inventory, Sales Analytics & Demand Forecasting Platform for Pizzerias**
 
-O PizzaStockAI é uma plataforma de gestão inteligente desenvolvida para otimizar a operação de pizzarias por meio da integração entre controle de estoque, gestão de vendas, monitoramento financeiro e previsão de demanda baseada em Machine Learning. O sistema visa transformar dados operacionais em informações estratégicas, permitindo uma gestão orientada por indicadores e redução de desperdícios.
+O **PizzaStockAI** é uma plataforma inteligente de gestão desenvolvida para pizzarias que desejam modernizar seus processos operacionais, reduzir desperdícios e tomar decisões orientadas por dados.
 
-Visão Geral
+A solução integra **controle de estoque**, **gestão de vendas**, **análise financeira**, **dashboards executivos** e **previsão de demanda utilizando Machine Learning**, proporcionando uma visão completa do negócio em tempo real.
 
-O projeto foi concebido para resolver problemas recorrentes encontrados em operações de food service, como:
+---
 
-Ruptura de estoque durante horários de pico;
-Excesso de compras e desperdício de insumos;
-Falta de rastreabilidade financeira;
-Ausência de indicadores de desempenho;
-Baixa previsibilidade de demanda.
+## 🚀 Visão Geral
 
-Por meio da combinação de APIs, dashboards analíticos e algoritmos de previsão, o PizzaStockAI fornece suporte à tomada de decisão operacional e gerencial.
+Administrar uma pizzaria envolve diversos desafios operacionais:
 
-Arquitetura da Solução
+- Ruptura de estoque durante horários de pico
+- Compras sem planejamento
+- Desperdício de ingredientes
+- Falta de indicadores gerenciais
+- Controle financeiro descentralizado
+- Ausência de previsibilidade da demanda
+
+O **PizzaStockAI** foi desenvolvido para resolver esses problemas por meio da integração entre dados operacionais, inteligência analítica e automação de processos.
+
+---
+
+## 🎯 Objetivos do Projeto
+
+- Automatizar o controle de estoque
+- Melhorar o planejamento de compras
+- Reduzir desperdícios de insumos
+- Centralizar a gestão operacional
+- Apoiar a tomada de decisão com indicadores de negócio
+- Aplicar Machine Learning para previsão de demanda
+
+---
+
+# ✨ Principais Funcionalidades
+
+## 📦 Gestão Inteligente de Estoque
+
+- Cadastro de ingredientes e insumos
+- Controle de estoque mínimo
+- Monitoramento de quantidades disponíveis
+- Controle de validade dos produtos
+- Registro de custos unitários
+- Atualização automática após vendas
+- Alertas de estoque crítico
+- Análise de risco de ruptura
+
+---
+
+## 🍕 Cadastro de Pizzas e Receitas
+
+Cada pizza cadastrada possui sua receita técnica vinculada.
+
+### Recursos
+
+- Cadastro de pizzas
+- Cadastro de ingredientes por receita
+- Controle de consumo por produto
+- Cálculo automático de insumos utilizados
+- Integração direta com o estoque
+
+---
+
+## 💰 Gestão de Vendas
+
+O módulo de vendas registra e processa pedidos automaticamente.
+
+### Funcionalidades
+
+- Registro de vendas
+- Histórico completo de pedidos
+- Baixa automática dos ingredientes utilizados
+- Controle de faturamento
+- Apuração de custos
+- Análise de lucratividade
+
+---
+
+## 📊 Dashboard Executivo
+
+Dashboard analítico desenvolvido com Streamlit.
+
+### Indicadores Monitorados
+
+- Faturamento diário
+- Faturamento semanal
+- Faturamento mensal
+- Faturamento anual
+- Ticket médio
+- Quantidade de pedidos
+- Lucro operacional
+- CMV (Custo da Mercadoria Vendida)
+- Estoque crítico
+- Produtos próximos ao vencimento
+
+---
+
+## ⚠️ Sistema Inteligente de Alertas
+
+Motor de monitoramento responsável por identificar situações críticas no negócio.
+
+### Alertas Disponíveis
+
+#### Estoque Crítico
+
+```text
+Mussarela abaixo do estoque mínimo
+Molho de tomate em nível crítico
+```
+
+#### Produtos Próximos ao Vencimento
+
+```text
+Tomate vence em 2 dias
+Calabresa vence em 3 dias
+```
+
+#### Crescimento de Demanda
+
+```text
+Aumento significativo nas vendas da Pizza Calabresa
+Necessidade de reposição antecipada
+```
+
+---
+
+## 🤖 Inteligência Artificial
+
+Um dos principais diferenciais do PizzaStockAI é seu módulo de análise preditiva.
+
+### Capacidades do Modelo
+
+- Previsão de vendas futuras
+- Estimativa de demanda
+- Planejamento de compras
+- Sugestão de reposição de estoque
+- Identificação de tendências de consumo
+- Apoio à tomada de decisão baseada em dados
+
+### Tecnologias Utilizadas
+
+```text
+Scikit-Learn
+Linear Regression
+NumPy
+Pandas
+```
+
+---
+
+# 👥 Controle de Usuários
+
+O sistema possui autenticação JWT e controle de acesso baseado em perfis.
+
+### Administrador
+
+- Acesso total ao sistema
+- Gestão de usuários
+- Configurações gerais
+- Relatórios completos
+
+### Gerente
+
+- Controle operacional
+- Indicadores gerenciais
+- Estoque e vendas
+- Relatórios
+
+### Atendente
+
+- Registro de vendas
+- Consulta de produtos
+- Consulta de estoque
+
+---
+
+# 🏗 Arquitetura da Solução
+
+```text
 PizzaStockAI
 │
-├── backend/                # API FastAPI
-│   ├── routers/            # Endpoints REST
-│   ├── services/           # Regras de negócio
-│   ├── models.py           # Modelos ORM
-│   ├── schemas.py          # DTOs/Pydantic
-│   ├── database.py         # Configuração do banco
-│   └── app.py              # Aplicação principal
+├── backend/
+│   ├── routers/
+│   ├── services/
+│   ├── models.py
+│   ├── schemas.py
+│   ├── database.py
+│   └── app.py
 │
-├── frontend/               # Dashboard Streamlit
+├── frontend/
 │   ├── app_pages/
 │   ├── assets/
-│   └── dashboard.py
+│   ├── dashboard.py
+│   ├── data.py
+│   └── clock.py
 │
-├── ml/                     # Módulos de IA
+├── ml/
 │   ├── forecast.py
 │   └── recommendation.py
-│
-├── tests/                  # Testes automatizados
 │
 ├── database/
 │   └── pizzastock.db
 │
-└── seed.py                 # Dados iniciais
+├── tests/
+│
+├── seed.py
+├── requirements.txt
+├── Dockerfile
+└── docker-compose.yml
+```
 
-Principais Funcionalidades
-Gestão Inteligente de Estoque
-Cadastro de ingredientes e insumos
-Controle de estoque mínimo
-Gestão de validade
-Controle de custos unitários
-Monitoramento em tempo real
-Alertas automáticos para itens críticos
-Identificação de produtos próximos ao vencimento
-Controle de Receitas
+---
 
-Cada pizza possui uma composição de ingredientes cadastrada no sistema.
+# 🔄 Fluxo de Operação
 
-Funcionalidades:
-
-Cadastro de receitas técnicas
-Mapeamento de consumo por produto
-Baixa automática dos insumos após cada venda
-Atualização automática do estoque
-Gestão de Vendas
-
-O módulo de vendas é responsável pelo gerenciamento completo dos pedidos.
-
-Recursos
-Registro de vendas
-Histórico de transações
-Apuração de faturamento
-Cálculo de custos
-Análise de lucratividade
-Indicadores operacionais em tempo real
+```text
+Venda Realizada
+       │
+       ▼
+Consumo da Receita
+       │
+       ▼
+Baixa Automática do Estoque
+       │
+       ▼
+Atualização dos Indicadores
+       │
+ ┌─────┼─────────────┐
+ ▼     ▼             ▼
+KPIs Alertas     Machine Learning
+ │     │             │
+ ▼     ▼             ▼
 Dashboard Executivo
+```
 
-O sistema disponibiliza dashboards analíticos desenvolvidos em Streamlit para acompanhamento dos principais KPIs do negócio.
+---
 
-Indicadores Monitorados
-Receita diária
-Receita mensal
-Receita anual
-Quantidade de pedidos
-Ticket médio
-Estoque crítico
-CMV
-Lucro operacional
-Produtos com risco de vencimento
-Sistema de Alertas Operacionais
+# 🛠 Stack Tecnológica
 
-Motor de monitoramento responsável pela geração de alertas estratégicos, incluindo:
+## Backend
 
-Estoque Crítico
-Mussarela abaixo do estoque mínimo
+- Python 3.13+
+- FastAPI
+- SQLAlchemy
+- Pydantic
+- JWT Authentication
+- Uvicorn
 
-Produtos Próximos ao Vencimento
-Tomate vence em 2 dias
+---
 
-Crescimento Repentino da Demanda
+## Frontend
 
-Possibilita antecipação de compras e planejamento operacional.
+- Streamlit
+- Plotly
+- Pandas
 
-Inteligência Artificial
+---
 
-Um dos diferenciais do PizzaStockAI é seu módulo de análise preditiva.
+## Machine Learning
 
-A camada de Machine Learning utiliza algoritmos de regressão para:
+- Scikit-Learn
+- NumPy
+- Pandas
+- Linear Regression
 
-Previsão de vendas futuras
-Estimativa de demanda por produto
-Planejamento de compras
-Identificação de padrões de consumo
-Apoio à tomada de decisão baseada em dados
-Stack Tecnológica
-Backend
-Python 3.13+
-FastAPI
-SQLAlchemy
-Pydantic
-JWT Authentication
-Uvicorn
-Frontend
-Streamlit
-Plotly
-Pandas
-Data Science
-Scikit-Learn
-NumPy
-Machine Learning Forecast Engine
-Banco de Dados
-Desenvolvimento
+---
+
+## Banco de Dados
+
+### Desenvolvimento
+
+```text
 SQLite
+```
 
-Produção
+### Produção
+
+```text
 PostgreSQL
+```
 
-Fluxo de Operação
-graph LR
-<img width="4032" height="936" alt="image" src="https://github.com/user-attachments/assets/6746f741-5eca-454f-ab71-6b2600339db6" />
+---
 
-A[Venda de Pizza]
---> B[Consumo da Receita]
+## DevOps
 
-B --> C[Baixa Automática do Estoque]
+- Docker
+- Docker Compose
 
-C --> D[Atualização dos Indicadores]
+---
 
-D --> E[Dashboard Gerencial]
+# ⚙️ Instalação
 
-D --> F[Motor de Alertas]
+## Clonando o Repositório
 
-D --> G[Previsão de Demanda]
-
-Instalação
-Clonando o Repositório
+```bash
 git clone https://github.com/Paulo68129/PizzaStockAI.git
+```
 
+```bash
 cd PizzaStockAI
+```
 
-Criando Ambiente Virtual
+---
+
+## Criando Ambiente Virtual
+
+### Windows
+
+```powershell
 python -m venv .venv
+```
 
-Windows
+```powershell
 .\.venv\Scripts\Activate.ps1
+```
 
-Instalação das Dependências
+### Linux
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+---
+
+## Instalando Dependências
+
+```powershell
 pip install -r requirements.txt
+```
 
-Execução da API
-python -m uvicorn backend.app:app --reload
+---
 
-Endpoints
+## Carregando Dados Iniciais
+
+```powershell
+python seed.py
+```
+
+---
+
+# ▶️ Executando o Sistema
+
+## Iniciar Backend
+
+```powershell
+python -m uvicorn backend.app:app --reload --port 8000
+```
+
+### Endereços
+
+```text
 API:
-http://127.0.0.1:8000
+http://localhost:8000
+```
 
-Swagger UI:
-http://127.0.0.1:8000/docs
+```text
+Swagger:
+http://localhost:8000/docs
+```
 
+```text
 ReDoc:
-http://127.0.0.1:8000/redoc
+http://localhost:8000/redoc
+```
 
-Execução do Dashboard
-cd frontend
+---
 
-streamlit run dashboard.py
+## Iniciar Dashboard
 
+Abra um segundo terminal:
 
-A aplicação ficará disponível em:
+```powershell
+streamlit run frontend/dashboard.py
+```
 
+A aplicação estará disponível em:
+
+```text
 http://localhost:8501
+```
 
-Testes
+---
 
-Execução da suíte de testes:
+# 🔐 Usuários de Demonstração
 
+## Administrador
+
+```text
+E-mail: admin@pizzastock.local
+Senha: 123456
+```
+
+---
+
+## Gerente
+
+```text
+E-mail: gerente@pizzastock.local
+Senha: 123456
+```
+
+---
+
+## Atendente
+
+```text
+E-mail: atendente@pizzastock.local
+Senha: 123456
+```
+
+---
+
+# 📡 API REST
+
+## Autenticação
+
+### Login
+
+```http
+POST /login
+```
+
+ou
+
+```http
+POST /auth/login
+```
+
+---
+
+## Ingredientes
+
+```http
+GET    /ingredientes
+POST   /ingredientes
+PUT    /ingredientes/{id}
+DELETE /ingredientes/{id}
+```
+
+---
+
+## Pizzas
+
+```http
+GET  /pizzas
+POST /pizzas
+```
+
+---
+
+## Vendas
+
+```http
+GET  /vendas
+POST /vendas
+```
+
+---
+
+## Analytics
+
+```http
+GET /analytics
+GET /analytics/completo
+GET /analytics/previsoes
+GET /analytics/recomendacoes
+```
+
+---
+
+## Alertas
+
+```http
+GET /alertas
+GET /analytics/alertas
+```
+
+---
+
+## Health Check
+
+```http
+GET /health
+```
+
+Resposta:
+
+```json
+{
+  "status": "ok",
+  "service": "PizzaStockAI"
+}
+```
+
+---
+
+# 🧪 Testes
+
+Executar todos os testes:
+
+```powershell
 pytest
+```
 
+Executar testes com mais detalhes:
+
+```powershell
+pytest -v
+```
 
 Estrutura atual:
 
+```text
 tests/
 ├── test_api.py
 ├── test_ml.py
 └── test_sales_service.py
+```
 
-Roadmap
-Curto Prazo
-Dashboard mobile responsive
-Exportação PDF e Excel
-Relatórios gerenciais avançados
-Controle multiusuário
-Médio Prazo
-Docker Compose
-PostgreSQL em produção
-Integração com ERPs
-API pública
-Longo Prazo
-IA generativa para recomendações
-Análise preditiva avançada
-Aplicativo mobile (Flutter)
-Multi-tenant SaaS
-Diferenciais Competitivos
-Controle operacional centralizado
-Previsão inteligente de demanda
-Gestão financeira integrada
-Alertas automatizados
-Dashboard analítico em tempo real
-Arquitetura escalável baseada em APIs
-Aplicação de Machine Learning em operações de food service
-Autor
+---
 
-Paulo Roberto Silva de Oliveira Júnior
+# 🐳 Docker
 
-Software Developer | Full Stack Developer
+Subir todos os serviços utilizando Docker:
 
-🎓 Análise e Desenvolvimento de Sistemas - UNIFESO
+```powershell
+docker compose up --build
+```
+
+Serviços disponíveis:
+
+| Serviço | Porta |
+|----------|---------|
+| API | 8000 |
+| Dashboard | 8501 |
+| PostgreSQL | 5432 |
+
+---
+
+# 📈 Roadmap
+
+## Curto Prazo
+
+- [ ] Dashboard responsivo para dispositivos móveis
+- [ ] Exportação PDF
+- [ ] Exportação Excel
+- [ ] Relatórios avançados
+- [ ] Controle refinado de permissões
+
+---
+
+## Médio Prazo
+
+- [ ] PostgreSQL como banco padrão
+- [ ] Docker Compose completo
+- [ ] API pública
+- [ ] Integrações com ERPs
+
+---
+
+## Longo Prazo
+
+- [ ] Aplicativo Mobile (Flutter)
+- [ ] Integração com iFood
+- [ ] Integração com WhatsApp Business
+- [ ] Multi-Tenant SaaS
+- [ ] IA Generativa para recomendações
+- [ ] Modelos avançados de previsão
+
+---
+
+# 💡 Diferenciais Competitivos
+
+✅ Gestão operacional centralizada
+
+✅ Controle automático de estoque
+
+✅ Indicadores financeiros em tempo real
+
+✅ Sistema inteligente de alertas
+
+✅ Dashboard executivo interativo
+
+✅ Previsão de demanda baseada em Machine Learning
+
+✅ API REST documentada com Swagger
+
+✅ Pronto para PostgreSQL
+
+✅ Pronto para Docker
+
+✅ Arquitetura modular escalável
+
+✅ Aplicação prática de IA para Food Service
+
+---
+
+# 👨‍💻 Autor
+
+## Paulo Roberto Silva de Oliveira Júnior
+
+**Desenvolvedor Full Stack**
+
+🎓 Análise e Desenvolvimento de Sistemas
 
 🔗 GitHub: https://github.com/Paulo68129
 
-Licença
+### Áreas de Interesse
 
-Este projeto foi desenvolvido para fins acadêmicos, portfólio profissional e demonstração de competências em desenvolvimento de software, análise de dados e inteligência artificial aplicada ao setor de alimentação.
+- Desenvolvimento Backend
+- Desenvolvimento Full Stack
+- Inteligência Artificial
+- Machine Learning
+- Análise de Dados
+- Sistemas de Gestão Empresarial
 
-PizzaStockAI® | Intelligent Inventory & Sales Management Platform for Pizzerias 🍕🚀
+---
+
+# 📄 Licença
+
+Este projeto está licenciado sob a licença **MIT**.
+
+Sinta-se livre para utilizar, estudar e contribuir para sua evolução.
+
+---
+
+⭐ Se este projeto foi útil para você, considere deixar uma estrela no repositório.
