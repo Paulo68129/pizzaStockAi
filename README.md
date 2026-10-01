@@ -598,9 +598,14 @@ Serviços disponíveis:
 
 ---
 
-# 👨‍💻 Autor
+# 👨‍💻 Autores
 
 ## Paulo Roberto Silva de Oliveira Júnior
+   Samuel 
+   João Daniel 
+   Douglas Lopes 
+   João 
+   Gabriel 
 
 **Desenvolvedor Full Stack**
 
