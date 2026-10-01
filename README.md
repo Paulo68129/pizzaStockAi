@@ -601,11 +601,11 @@ Serviços disponíveis:
 # 👨‍💻 Autores
 
 ## Paulo Roberto Silva de Oliveira Júnior
-   Samuel 
-   João Daniel 
-   Douglas Lopes 
-   João 
-   Gabriel 
+## Samuel 
+## João Daniel 
+## Douglas Lopes 
+## João 
+## Gabriel 
 
 **Desenvolvedor Full Stack**
 
